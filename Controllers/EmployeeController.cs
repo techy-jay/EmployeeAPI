@@ -24,8 +24,7 @@ namespace Employee.Controllers
 
         [HttpGet("GetEmployeeUsingSP")]
         public Response GetEmployeeUsingSP() {
-            Response res = iemployee.GetEmployee();
-            return res;
+            return iemployee.GetEmployee();
         }
 
     }

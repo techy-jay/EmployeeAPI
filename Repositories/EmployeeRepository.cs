@@ -19,12 +19,7 @@ namespace Employee.Repositories
                 DynamicParameters dynamicParameter = new DynamicParameters();
                 DataTable dt = GetDataTable("EMS_GetEmployee", dynamicParameter);
                 List<EMS_GetEmployee> getemployee = Get_dataTable_to_json<List<EMS_GetEmployee>>(dt);
-                Response res = GetResponse(getemployee);
-                //Response res = new Response();
-                //res.status = 1;
-                //res.message = "Done";
-                //res.data = getemployee;
-                return res;
+                return GetResponse(getemployee);
             }
             catch (Exception e) {
                 return GetError(e.Message.ToString());

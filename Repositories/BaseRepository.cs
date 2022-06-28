@@ -70,14 +70,14 @@ public abstract class BaseRepository
         }
     }
 
-        public static X Get_dataTable_to_json<X>(DataTable dt)
-        {
+    public static X Get_dataTable_to_json<X>(DataTable dt)
+    {
 
-            string JSONString = string.Empty;
-            JSONString = JsonConvert.SerializeObject(dt);
-            X pm = JsonConvert.DeserializeObject<X>(JSONString);
-            return pm;
-        }
+        string JSONString = string.Empty;
+        JSONString = JsonConvert.SerializeObject(dt);
+        X pm = JsonConvert.DeserializeObject<X>(JSONString);
+        return pm;
+    }
 
     public Response GetResponse(object data, int status = 1, string Message = "Success")
     {
